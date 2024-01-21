@@ -12,21 +12,20 @@ export const getStaticProps = async () => {
 };
 
 const Users = ({ users }) => {
-  // console.log(users)
-
   return (
     <>
       <Head>
         <title>User List | Users Listing</title>
-        <meta name="keywords" content="users listing" />
       </Head>
       <div>
-        <h1>All users</h1>
+        <h1 className={styles.heading}>All users</h1>
         {users.map((user) => (
-          <Link href={"/users/" + user.id} key={user.id}>
-            <a className={styles.single}>
-              <h3>{user.name}</h3>
-            </a>
+          <Link
+            className={styles.single}
+            href={"/users/" + user.id}
+            key={user.id}
+          >
+            <h3>{user.name}</h3>
           </Link>
         ))}
       </div>

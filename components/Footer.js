@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer>Copyright 2021 User List</footer>;
+  return <footer>{`© ${new Date().getFullYear()} User List`}</footer>;
 };
 
 export default Footer;

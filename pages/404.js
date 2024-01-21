@@ -8,26 +8,26 @@ const NotFound = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      // router.go(-1)
-      // router.go(1)
-      router.push("/");
-    }, 3000);
+      window.history.length > 2 ? router.back() : router.push("/");
+    }, 5000);
   }, []);
 
   return (
     <>
       <Head>
         <title>User List | 404 Not Found</title>
-        <meta name="keywords" content="404 not found" />
       </Head>
       <div className="not-found">
-        <h1>Ooops...</h1>
-        <h2>That page cannot be found :(</h2>
+        <h1>404 - Page Not Found</h1>
+        <h2>Sorry, the page you're looking for doesn't exist.</h2>
         <p>
-          Go back to the{" "}
-          <Link href="/">
-            <a>Home Page</a>
-          </Link>
+          <a
+            onClick={() =>
+              window.history.length > 2 ? router.back() : router.push("/")
+            }
+          >
+            Go back
+          </a>
         </p>
       </div>
     </>

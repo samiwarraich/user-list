@@ -4,18 +4,12 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav>
-      <div className="logo">
-        <Image src="/logo.png" alt="site logo" width={70} height={70} />
-      </div>
-      <Link href="/">
-        <a>Home</a>
+      <Link className="logo" href="/">
+        <Image src="/logo.png" alt="site logo" width={25} height={25} />
       </Link>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-      <Link href="/users/">
-        <a>User Listing</a>
-      </Link>
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/users/">User Listing</Link>
     </nav>
   );
 };

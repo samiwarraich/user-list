@@ -6,7 +6,6 @@ const About = () => {
     <>
       <Head>
         <title>User List | About</title>
-        <meta name="keywords" content="users" />
       </Head>
       <div>
         <h1 className={styles.title}>About</h1>
